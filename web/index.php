@@ -108,7 +108,7 @@ $app->post('/archive/start', 'cors', function () use ($app) {
     $json = $app->request->getBody();
     $data = json_decode($json, true);
     $sessionId = $data['sessionId'];
-    $archive = $app->opentok->startArchive($sessionId, 'Getting Started Sample Archive');
+    $archive = $app->opentok->startArchive($sessionId, 'brazen - Getting Started Sample Archive');
     $app->response->headers->set('Content-Type', 'application/json');
     echo json_encode($archive->toJson());
 });
