@@ -115,7 +115,7 @@ $app->post('/archive/start', 'cors', function () use ($app) {
     'outputMode' => OutputMode::COMPOSED,   // default: OutputMode::COMPOSED
     'resolution' => '1280x720'              // default: '640x480'
     );
-    $archive = $app->opentok->startArchive($sessionId, $archiveOptions);
+    $archive = $app->opentok->startArchive($sessionId, 'Brazen - Getting Started Sample Archive');
     $app->response->headers->set('Content-Type', 'application/json');
     echo json_encode($archive->toJson());
 });
